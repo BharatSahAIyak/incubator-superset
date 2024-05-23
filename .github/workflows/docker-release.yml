@@ -44,4 +44,4 @@ jobs:
         run: |
           GITHUB_RELEASE_TAG_NAME="${{ github.event.release.tag_name }}"
           pip install click
-          ./scripts/build_docker.py ${{ matrix.build_preset }} release --platform ${{ matrix.platform }} --dry-run
+          ./scripts/build_docker.py ${{ matrix.build_preset }} release --platform ${{ matrix.platform }}
