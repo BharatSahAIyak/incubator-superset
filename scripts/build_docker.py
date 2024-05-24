@@ -238,7 +238,7 @@ def main(
             script = dedent(
                 f"""\
                 docker logout
-                docker login --username "{os.getenv("DOCKERHUB_USER")}" --password "{os.getenv("DOCKERHUB_TOKEN")}"
+                docker login ghcr.io --username "{os.getenv("DOCKERHUB_USER")}" --password "{os.getenv("DOCKERHUB_TOKEN")}"
                 DOCKER_ARGS="--push"
                 """
             )
