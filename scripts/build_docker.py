@@ -23,7 +23,7 @@ from textwrap import dedent
 
 import click
 
-REPO = "apache/superset"
+REPO = "ghcr.io/bharatsahaiyak/superset"
 CACHE_REPO = f"{REPO}-cache"
 BASE_PY_IMAGE = "3.9-slim-bookworm"
 
@@ -277,7 +277,7 @@ def main(
             script = dedent(
                 f"""\
                 docker logout
-                docker login --username "{os.getenv("DOCKERHUB_USER")}" --password "{os.getenv("DOCKERHUB_TOKEN")}"
+                docker login ghcr.io --username "{os.getenv("DOCKERHUB_USER")}" --password "{os.getenv("DOCKERHUB_TOKEN")}"
                 DOCKER_ARGS="--push"
                 """
             )
